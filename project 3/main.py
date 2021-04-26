@@ -42,7 +42,7 @@ def handle_dialog(req, res):
             'room': None,
             'win': False,
             'per': None,
-            'end_chest': ['Ключ', 'Вирус', 'Золото', 'Вирус'],
+            'end_chest': ['Золото', 'Вирус'],
             'chance': ["да", "нет", "нет", "нет"],
             'lose': False,
             'random_text': ["Сундук", "Ловушка"],
