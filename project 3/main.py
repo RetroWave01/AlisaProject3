@@ -179,8 +179,8 @@ def enemy_fight(user_id, res, enemy, req):
                 return
     elif req['request']['original_utterance'].lower() in ['атаковать']:
         sessionStorage[user_id]['hero'][0] = sessionStorage[user_id]['hero'][0] \
-                                             - sessionStorage[user_id][enemy][1] - \
-                                             sessionStorage[user_id]['hero'][1]
+                                             - (sessionStorage[user_id][enemy][1] -
+                                                sessionStorage[user_id]['hero'][1])
         sessionStorage[user_id][enemy][0] = sessionStorage[user_id][enemy][0] - sessionStorage[user_id]['hero'][2]
         if sessionStorage[user_id]['hero'][0] <= 0 and sessionStorage[user_id][enemy][0] <= 0:
             res['response']['text'] = "Вы ударили существо" + " '" + enemy + "' " + "теперь у него " + \
